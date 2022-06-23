@@ -22,7 +22,8 @@ public class Main {
         Adresse add1 = new Adresse("DU 30 JUIN", "12B", "Kamoto", "Gambela", "Lubumbashi", "    Lubumbashi", "RDC");
         Personne Michael = new Personne("TSHIPAMBA", "Michael", add1);
         Date date1 = new Date(2024,12,22);
-        Produit<String> Cahier = new Produit<>("0921", "Cahier", 2.4,"Pcs", date1);
+        Produit<String> cahier = new Produit<>("0921", "Cahier", 2.4,"Pcs", date1);
+        System.out.println(cahier);
 
     }
 
