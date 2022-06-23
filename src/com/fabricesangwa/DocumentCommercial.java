@@ -20,12 +20,20 @@ public abstract class DocumentCommercial {
         return client;
     }
 
+
     public Detail getDetail() {
         return detail;
     }
 
-
-    public  abstract Double getTotal();
-    public  abstract  Double getTVA();
-
+    public  double getTotal(){
+        double total = 0.0;
+        for (Ligne i : detail.ligne){
+            total += i.getPrixTotal();
+        }
+        return total;
+    }
+    
+    public double getTVA(){
+        return this.getTotal() * 0.16;
+    }
 }

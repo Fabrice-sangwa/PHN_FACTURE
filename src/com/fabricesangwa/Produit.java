@@ -9,11 +9,11 @@ public class Produit <T> {
     private T uniteMesure;
     private Date dateExpriration;
 
-    public Produit(String code, String designation, Double prix, String uniteMesure, Date dateExpriration) {
+    public Produit(String code, String designation, Double prix, T uniteMesure, Date dateExpriration) {
         this.code = code;
         this.designation = designation;
         this.prix = prix;
-        this.uniteMesure = (T) uniteMesure;
+        this.uniteMesure =  uniteMesure;
         this.dateExpriration = dateExpriration;
     }
 
