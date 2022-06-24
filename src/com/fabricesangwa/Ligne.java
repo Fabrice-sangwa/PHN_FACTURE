@@ -1,11 +1,18 @@
 package com.fabricesangwa;
 
+import mesure.UniteMesure;
+
 public class Ligne{
     private  int numero;
     private  int quantite;
-    Produit produit;
+    private Produit<UniteMesure> produit;
 
-    public Ligne(int numero, int quantite, Produit produit) {
+    public Ligne(int quantite, Produit<UniteMesure> produit) {
+        this.quantite = quantite;
+        this.produit = produit;
+    }
+
+    public Ligne(int numero, int quantite, Produit<UniteMesure> produit){
         this.numero = numero;
         this.quantite = quantite;
         this.produit = produit;
@@ -27,16 +34,17 @@ public class Ligne{
         this.quantite = quantite;
     }
 
-    public Produit getProduit() {
+    public Produit<UniteMesure> getProduit() {
+
         return produit;
     }
 
-    public void setProduit(Produit produit) {
+    public void setProduit(Produit<UniteMesure> produit) {
         this.produit = produit;
     }
 
     public Double getPrixTotal(){
-        return this.getQuantite() * this.produit.getPrix();
+        return getQuantite() * produit. getPrix();
     }
 
 

@@ -9,6 +9,8 @@ public class Produit <T> {
     private T uniteMesure;
     private Date dateExpriration;
 
+    private  Categorie categorie;
+
     public Produit(String code, String designation, Double prix, T uniteMesure, Date dateExpriration) {
         this.code = code;
         this.designation = designation;
@@ -20,7 +22,6 @@ public class Produit <T> {
     public String getCode() {
         return code;
     }
-
 
     public String getDesignation() {
         return designation;
@@ -36,6 +37,10 @@ public class Produit <T> {
 
     public Date getDateExpriration() {
         return dateExpriration;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
     }
 
     public void setCode(String code) {
@@ -58,5 +63,7 @@ public class Produit <T> {
         this.dateExpriration = dateExpriration;
     }
 
-
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
 }

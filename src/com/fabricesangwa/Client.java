@@ -3,11 +3,19 @@ package com.fabricesangwa;
 public class Client extends Personne {
     private  String numero;
 
-    public Client(String nom, String prenom, Adresse adresse, String numero) {
+
+
+    public Client(String nom, String prenom, Adresse adresse){
         super(nom, prenom, adresse);
-        this.numero = numero;
     }
 
+    public Client(String nom){
+        super(nom);
+    }
+
+    public  Client(String nom, String prenom){
+        super(nom, prenom);
+    }
     public String getNumero() {
         return numero;
     }
