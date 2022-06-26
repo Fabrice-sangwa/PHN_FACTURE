@@ -1,20 +1,26 @@
 package com.fabricesangwa;
 
+import java.io.File;
+
 public class Client extends Personne {
     private  String numero;
-
+    File file = new File("clients.txt");
+    Fichier fichier = new Fichier(file);
 
 
     public Client(String nom, String prenom, Adresse adresse){
         super(nom, prenom, adresse);
+        fichier.creer();
     }
 
     public Client(String nom){
         super(nom);
+        fichier.creer();
     }
 
     public  Client(String nom, String prenom){
         super(nom, prenom);
+        fichier.creer();
     }
     public String getNumero() {
         return numero;

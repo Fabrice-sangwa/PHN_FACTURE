@@ -1,6 +1,7 @@
 package com.fabricesangwa;
 
 
+import java.io.File;
 import java.util.ArrayList;
 
 public abstract class DocumentCommercial {
@@ -8,10 +9,15 @@ public abstract class DocumentCommercial {
     private Client client;
     private Detail detail;
 
+
+    File file = new File("documentCommercial.txt");
+    Fichier fichier = new Fichier(file);
+
     public DocumentCommercial(long numero, Client client, Detail detail) {
         this.numero = numero;
         this.client = client;
         this.detail = detail;
+        fichier.creer();
     }
 
     public long getNumero() {

@@ -1,5 +1,6 @@
 package com.fabricesangwa;
 
+import java.io.File;
 import java.util.Date;
 
 public class Produit <T> {
@@ -11,12 +12,16 @@ public class Produit <T> {
 
     private  Categorie categorie;
 
+    File file = new File("produit.txt");
+    Fichier fichier = new Fichier(file);
+
     public Produit(String code, String designation, Double prix, T uniteMesure, Date dateExpriration) {
         this.code = code;
         this.designation = designation;
         this.prix = prix;
         this.uniteMesure =  uniteMesure;
         this.dateExpriration = dateExpriration;
+        fichier.creer();
     }
 
     public String getCode() {

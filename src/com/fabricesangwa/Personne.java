@@ -1,5 +1,6 @@
 package com.fabricesangwa;
 
+import java.io.File;
 import java.sql.Struct;
 import java.util.Locale;
 
@@ -7,20 +8,25 @@ public class Personne {
     private String nom;
     private String prenom;
     private Adresse adresse;
+    File file = new File("personnes.txt");
+    Fichier fichier = new Fichier(file);
 
     public Personne(String nom, String prenom, Adresse adresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
+        fichier.creer();
     }
 
     public  Personne(String nom){
         this.nom = nom;
+        fichier.creer();
     }
 
     public Personne(String nom, String prenom){
         this.nom = nom;
         this.prenom = prenom;
+        fichier.creer();
     }
 
     public String getNom() {
@@ -115,6 +121,7 @@ public class Personne {
         public void setNumero(String numero) {
             this.numero = numero;
         }
+
 
         public void setCellule(String cellule) {
             this.cellule = cellule;

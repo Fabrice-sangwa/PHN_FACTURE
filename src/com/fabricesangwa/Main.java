@@ -1,4 +1,6 @@
 package com.fabricesangwa;
+import java.io.File;
+import java.io.IOException;
 import  java.util.*;
 
 import java.util.List;
@@ -19,8 +21,11 @@ Liste des membres
  */
 public class Main {
     public static void main(String[] args) {
-
-
+     File file = new File("Fichier.txt");
+     Fichier fichier = new Fichier(file);
+     fichier.creer();
+     fichier.ecrire();
+     fichier.lire();
     }
 
 
