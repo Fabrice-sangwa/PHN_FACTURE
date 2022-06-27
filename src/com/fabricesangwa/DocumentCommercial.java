@@ -9,9 +9,7 @@ public abstract class DocumentCommercial {
     private Client client;
     private Detail detail;
 
-
-    File file = new File("documentCommercial.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("documentCommercial.txt"));
 
     public DocumentCommercial(long numero, Client client, Detail detail) {
         this.numero = numero;

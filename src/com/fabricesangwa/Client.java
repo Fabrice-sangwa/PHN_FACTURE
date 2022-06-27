@@ -4,8 +4,7 @@ import java.io.File;
 
 public class Client extends Personne {
     private  String numero;
-    File file = new File("clients.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("clients.txt"));
 
 
     public Client(String nom, String prenom, Adresse adresse){

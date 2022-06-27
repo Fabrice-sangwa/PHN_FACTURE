@@ -4,8 +4,7 @@ import java.io.File;
 
 public abstract class Devis extends  DocumentCommercial{
 
-    File file = new File("devis.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("devis.txt"));
     public Devis(long numero, Client client, Detail detail) {
         super(numero, client, detail);
         fichier.creer();

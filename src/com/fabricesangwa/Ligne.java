@@ -9,8 +9,7 @@ public class Ligne{
     private  int quantite;
     private Produit<UniteMesure> produit;
 
-    File file = new File("ligne.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("ligne.txt"));
 
     public Ligne(int quantite, Produit<UniteMesure> produit) {
         this.quantite = quantite;

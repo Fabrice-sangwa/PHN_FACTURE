@@ -5,8 +5,7 @@ import java.io.File;
 public class Categorie {
     private String designation;
     private String description = "";
-    File file = new File("categorie.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("categorie.txt"));
 
     public Categorie(String designation, String description) {
         this.designation = designation;

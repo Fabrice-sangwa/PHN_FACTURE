@@ -41,19 +41,22 @@ public class Fichier {
         }
     }
 
-    public void  ecrire (){
-        try {
-            FileWriter writer = new FileWriter(file);
-            BufferedWriter bw = new BufferedWriter(writer);
-
-            for (int i = 1; i <=3 ; i++) {
-                bw.write("La ligne N°" + i );
+    public void  ecrire (String texte){
+        if (file.exists()){
+            try {
+                FileWriter writer = new FileWriter(file);
+                BufferedWriter bw = new BufferedWriter(writer);
+                bw.append(texte);
                 bw.newLine();
+                bw.append("==============");
+                bw.flush();
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            bw.flush();
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            System.out.println("The not exists");
         }
+
     }
 }

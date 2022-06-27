@@ -12,8 +12,7 @@ public class Produit <T> {
 
     private  Categorie categorie;
 
-    File file = new File("produit.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("produit.txt"));
 
     public Produit(String code, String designation, Double prix, T uniteMesure, Date dateExpriration) {
         this.code = code;

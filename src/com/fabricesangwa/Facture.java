@@ -3,8 +3,7 @@ package com.fabricesangwa;
 import java.io.File;
 
 public class Facture extends DocumentCommercial{
-    File file = new File("facture.txt");
-    Fichier fichier = new Fichier(file);
+    Fichier fichier = new Fichier(new File("facture.txt"));
     public Facture(long numero, Client client, Detail detail) {
         super(numero, client, detail);
         fichier.creer();

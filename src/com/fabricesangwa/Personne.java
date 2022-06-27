@@ -8,25 +8,29 @@ public class Personne {
     private String nom;
     private String prenom;
     private Adresse adresse;
-    File file = new File("personnes.txt");
-    Fichier fichier = new Fichier(file);
+
+    Fichier fichier = new Fichier(new File("personnes.txt"));
 
     public Personne(String nom, String prenom, Adresse adresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         fichier.creer();
+        fichier.ecrire(this.prenom  + " "  + this.nom + this.adresse);
+
     }
 
     public  Personne(String nom){
         this.nom = nom;
         fichier.creer();
+        fichier.ecrire(this.nom);
     }
 
     public Personne(String nom, String prenom){
         this.nom = nom;
         this.prenom = prenom;
         fichier.creer();
+        fichier.ecrire(this.prenom + " " + nom);
     }
 
     public String getNom() {

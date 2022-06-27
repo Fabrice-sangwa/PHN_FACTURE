@@ -21,11 +21,7 @@ Liste des membres
  */
 public class Main {
     public static void main(String[] args) {
-     File file = new File("Fichier.txt");
-     Fichier fichier = new Fichier(file);
-     fichier.creer();
-     fichier.ecrire();
-     fichier.lire();
+     Personne fabrice = new Personne("Sangwa", "Fabrice");
     }
 
 
