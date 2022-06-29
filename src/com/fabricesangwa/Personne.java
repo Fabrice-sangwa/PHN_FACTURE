@@ -17,6 +17,7 @@ public class Personne {
         this.adresse = adresse;
         fichier.creer();
         fichier.ecrire(this.prenom  + " "  + this.nom + this.adresse);
+        fichier.lire();
 
     }
 
@@ -62,8 +63,7 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "Le Client : " + this.nom  + " " + this.prenom.toUpperCase()
-                + "\n" + adresse.toString();
+        return fichier.lire();
     }
 
     public class Adresse {
