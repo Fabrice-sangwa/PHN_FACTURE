@@ -29,15 +29,13 @@ public class Fichier {
         if (file.exists()){
             try {
                 this.fileWriter = new  FileWriter(this.file, true);
-                this.fileWriter.append("\n" + texte);
+                this.fileWriter.append("\n");
+                this.fileWriter.append(texte);
                 this.fileWriter.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
-            System.out.println("The not exists");
         }
-
     }
 
     public String lire (){

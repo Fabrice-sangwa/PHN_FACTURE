@@ -22,6 +22,14 @@ public class Produit <T> {
         this.dateExpriration = dateExpriration;
         fichier.creer();
     }
+    public Produit(String code, String designation, Double prix, T uniteMesure) {
+        this.code = code;
+        this.designation = designation;
+        this.prix = prix;
+        this.uniteMesure =  uniteMesure;
+        fichier.creer();
+        fichier.ecrire(code + " " + designation + " " + prix + " " + uniteMesure );
+    }
 
     public String getCode() {
         return code;
