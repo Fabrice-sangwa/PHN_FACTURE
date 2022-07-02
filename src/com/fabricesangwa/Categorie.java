@@ -11,6 +11,7 @@ public class Categorie {
         this.designation = designation;
         this.description = description;
         fichier.creer();
+        fichier.ecrire(this.designation + " " + this.description);
     }
 
     public Categorie(String designation) {

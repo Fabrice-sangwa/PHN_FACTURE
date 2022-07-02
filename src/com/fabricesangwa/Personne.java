@@ -1,8 +1,6 @@
 package com.fabricesangwa;
 
 import java.io.File;
-import java.sql.Struct;
-import java.util.Locale;
 
 public class Personne {
     private String nom;
@@ -11,14 +9,10 @@ public class Personne {
 
     Fichier fichier = new Fichier(new File("personnes.txt"));
 
-    public Personne(String nom, String prenom, Adresse adresse) {
+    public Personne(String nom, String prenom, String numero, Adresse adresse) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
-        fichier.creer();
-        fichier.ecrire(this.prenom  + " "  + this.nom + this.adresse);
-        fichier.lire();
-
     }
 
     public  Personne(String nom){
@@ -31,7 +25,7 @@ public class Personne {
         this.nom = nom;
         this.prenom = prenom;
         fichier.creer();
-        fichier.ecrire(this.prenom + " " + nom);
+        fichier.ecrire(this.prenom + " " + this.nom);
     }
 
     public String getNom() {
@@ -61,12 +55,9 @@ public class Personne {
     }
 
 
-    @Override
-    public String toString() {
-        return fichier.lire();
-    }
 
-    public class Adresse {
+
+    public static class Adresse {
 
         private String avenue;
         private String numero;
@@ -145,17 +136,6 @@ public class Personne {
 
         public void setPays(String pays) {
             this.pays = pays;
-        }
-
-        @Override
-        public String toString() {
-            return "Adresse\n===========\n"
-                    + "Pays : " + getPays()  + "\n"
-                    +  "Ville : "  +  getVille() + "\n"
-                    +  "Commune : " + getCommune() + "\n"
-                    + "Quartier : " + getQuartier() + "\n"
-                    +  "Cellule " + getCellule() + "\n"
-                    + "Avenue " + getAvenue();
         }
     }
 

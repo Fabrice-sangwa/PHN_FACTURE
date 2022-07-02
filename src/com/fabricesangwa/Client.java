@@ -7,10 +7,21 @@ public class Client extends Personne {
     Fichier fichier = new Fichier(new File("clients.txt"));
 
 
-    public Client(String nom, String prenom, Adresse adresse){
-        super(nom, prenom, adresse);
+    public Client(String nom, String prenom, String numero, Personne.Adresse adresse){
+        super(nom, prenom, numero, adresse);
         fichier.creer();
+        fichier.ecrire(nom + " " + prenom + " " +
+                            numero + " " + adresse.getPays()  + " " +
+                            adresse.getVille() + " " +
+                            adresse.getCommune() + " " +
+                            adresse.getQuartier() + " " +
+                            adresse.getCellule() + " " +
+                            adresse.getAvenue() + " " +
+                            adresse.getNumero());
     }
+
+
+
 
     public Client(String nom){
         super(nom);
