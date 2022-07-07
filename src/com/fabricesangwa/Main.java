@@ -16,7 +16,7 @@ Liste des membres
 4. MULENGA MULAPU Elisée
 5. TSHIPAMBA BULAMBA Michael
 6. MBOMBO KATEMBWE Urcilla
-7. MBOUMA LOMBA Fabien
+7. MBOKUMA LOMBA Fabien
 
 
  */
